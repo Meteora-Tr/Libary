@@ -1,0 +1,139 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <form
+            action="/admin/products/edit/{{products.id}}"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="card-body">
+              <div class="form-group">
+                <label for="name">Category title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Title"
+                  name="name"
+                  value="{{products.name}}"
+                />
+              </div>
+              <div class="form-group">
+                <label for="name">Book price</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="price"
+                  placeholder="Price"
+                  name="price"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="img">Category icon</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input"
+                      id="img"
+                      name="img"
+                    />
+                    <label class="custom-file-label" for="img">Choose file</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+        <!-- /.card -->
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+{{!-- <div class="content">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <form
+            action="/admin/products/edit{{products.id}}"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="card-body">
+              <div class="form-group">
+                <label for="name">Book title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Title"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="name">Book price</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="price"
+                  placeholder="Price"
+                  name="price"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="img">Book picture</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input"
+                      id="img"
+                      name="img"
+                      required
+                    />
+                    <label class="custom-file-label" for="img">Book picture</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Book page</label>
+                <select name="categoryId" class="form-control">
+                  {{#each category}}
+                    <option value="{{id}}" id="{{id}}">{{name}}</option>
+                  {{/each}}
+                </select>
+              </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+        <!-- /.card -->
+      </div>
+    </div>
+  </div>
+</div> --}}
